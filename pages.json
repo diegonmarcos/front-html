@@ -1,0 +1,26 @@
+{
+  "_generated": "DO NOT EDIT: scripts/gen-pages.py derives this from the GitHub API",
+  "owner": "diegonmarcos",
+  "pages": [
+    {
+      "repo": "diegonmarcos.github.io",
+      "url": "https://diegonmarcos.github.io/",
+      "source": {
+        "branch": "main",
+        "path": "/",
+        "build_type": "workflow"
+      },
+      "public": true
+    },
+    {
+      "repo": "HardTech-Chronos",
+      "url": "https://diegonmarcos.github.io/HardTech-Chronos/",
+      "source": {
+        "branch": "main",
+        "path": "/",
+        "build_type": "workflow"
+      },
+      "public": true
+    }
+  ]
+}

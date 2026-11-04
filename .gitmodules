@@ -1,0 +1,6 @@
+[submodule "diegonmarcos.github.io"]
+	path = diegonmarcos.github.io
+	url = https://github.com/diegonmarcos/diegonmarcos.github.io.git
+[submodule "profile"]
+	path = profile
+	url = https://github.com/diegonmarcos/diegonmarcos.git
