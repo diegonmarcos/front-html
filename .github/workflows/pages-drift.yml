@@ -1,0 +1,27 @@
+name: pages-drift
+# Regenerates pages.json from the GitHub API and fails when the committed file differs (drift).
+on:
+  schedule:
+    - cron: "17 5 * * *"
+  workflow_dispatch:
+  push:
+    branches: [main]
+permissions:
+  contents: read
+jobs:
+  drift:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          submodules: false
+      - name: Regenerate pages.json from the GitHub API
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: python3 scripts/gen-pages.py
+      - name: Fail on drift
+        run: |
+          if ! git diff --exit-code pages.json; then
+            echo "::error::pages.json drifted from the GitHub API. Run scripts/gen-pages.py and commit."
+            exit 1
+          fi
