@@ -1,0 +1,27 @@
+{
+  "_doc": "SoT of the html site repos this hub mounts as submodules (owner-declared). .gitmodules and the gitlinks are derived from it: node scripts/gen-gitmodules.mjs [--check]. Each repo is mounted at a root folder of the same name; the two base entries keep their historical folders.",
+  "owner": "diegonmarcos",
+  "branch": "main",
+  "base": [
+    { "path": "diegonmarcos.github.io", "repo": "diegonmarcos.github.io" },
+    { "path": "profile", "repo": "diegonmarcos" }
+  ],
+  "repos": [
+    "cloud-me-pub-profiles-_lnktree",
+    "cloud-me-pub-profiles-leaf.y",
+    "cloud-me-pub-profiles-nexus.z",
+    "cloud-me-pub-profiles-stark.x",
+    "cloud-me-pub-profiles-prf-prs",
+    "CG-circus",
+    "CG-galaxy",
+    "CG-galaxy-gaia",
+    "cloudy-h-webapps",
+    "cloudy-h-webapps-2",
+    "cloudy-h-webapps-mob",
+    "cloudy-h-webapps-desk",
+    "HardTech-Chronos",
+    "HardTech-DeepXTech",
+    "Projects-endeavours",
+    "Projects-labtools"
+  ]
+}

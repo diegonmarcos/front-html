@@ -1,6 +1,92 @@
+# GENERATED FILE: DO NOT EDIT. `node scripts/gen-gitmodules.mjs` derives it from html-repos.json.
+# Guard: `node scripts/gen-gitmodules.mjs --check` (CI: pages-drift).
+
 [submodule "diegonmarcos.github.io"]
 	path = diegonmarcos.github.io
 	url = https://github.com/diegonmarcos/diegonmarcos.github.io.git
+	branch = main
+
 [submodule "profile"]
 	path = profile
 	url = https://github.com/diegonmarcos/diegonmarcos.git
+	branch = main
+
+[submodule "cloud-me-pub-profiles-_lnktree"]
+	path = cloud-me-pub-profiles-_lnktree
+	url = https://github.com/diegonmarcos/cloud-me-pub-profiles-_lnktree.git
+	branch = main
+
+[submodule "cloud-me-pub-profiles-leaf.y"]
+	path = cloud-me-pub-profiles-leaf.y
+	url = https://github.com/diegonmarcos/cloud-me-pub-profiles-leaf.y.git
+	branch = main
+
+[submodule "cloud-me-pub-profiles-nexus.z"]
+	path = cloud-me-pub-profiles-nexus.z
+	url = https://github.com/diegonmarcos/cloud-me-pub-profiles-nexus.z.git
+	branch = main
+
+[submodule "cloud-me-pub-profiles-stark.x"]
+	path = cloud-me-pub-profiles-stark.x
+	url = https://github.com/diegonmarcos/cloud-me-pub-profiles-stark.x.git
+	branch = main
+
+[submodule "cloud-me-pub-profiles-prf-prs"]
+	path = cloud-me-pub-profiles-prf-prs
+	url = https://github.com/diegonmarcos/cloud-me-pub-profiles-prf-prs.git
+	branch = main
+
+[submodule "CG-circus"]
+	path = CG-circus
+	url = https://github.com/diegonmarcos/CG-circus.git
+	branch = main
+
+[submodule "CG-galaxy"]
+	path = CG-galaxy
+	url = https://github.com/diegonmarcos/CG-galaxy.git
+	branch = main
+
+[submodule "CG-galaxy-gaia"]
+	path = CG-galaxy-gaia
+	url = https://github.com/diegonmarcos/CG-galaxy-gaia.git
+	branch = main
+
+[submodule "cloudy-h-webapps"]
+	path = cloudy-h-webapps
+	url = https://github.com/diegonmarcos/cloudy-h-webapps.git
+	branch = main
+
+[submodule "cloudy-h-webapps-2"]
+	path = cloudy-h-webapps-2
+	url = https://github.com/diegonmarcos/cloudy-h-webapps-2.git
+	branch = main
+
+[submodule "cloudy-h-webapps-mob"]
+	path = cloudy-h-webapps-mob
+	url = https://github.com/diegonmarcos/cloudy-h-webapps-mob.git
+	branch = main
+
+[submodule "cloudy-h-webapps-desk"]
+	path = cloudy-h-webapps-desk
+	url = https://github.com/diegonmarcos/cloudy-h-webapps-desk.git
+	branch = main
+
+[submodule "HardTech-Chronos"]
+	path = HardTech-Chronos
+	url = https://github.com/diegonmarcos/HardTech-Chronos.git
+	branch = main
+
+[submodule "HardTech-DeepXTech"]
+	path = HardTech-DeepXTech
+	url = https://github.com/diegonmarcos/HardTech-DeepXTech.git
+	branch = main
+
+[submodule "Projects-endeavours"]
+	path = Projects-endeavours
+	url = https://github.com/diegonmarcos/Projects-endeavours.git
+	branch = main
+
+[submodule "Projects-labtools"]
+	path = Projects-labtools
+	url = https://github.com/diegonmarcos/Projects-labtools.git
+	branch = main

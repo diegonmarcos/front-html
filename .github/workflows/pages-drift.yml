@@ -18,10 +18,18 @@ jobs:
       - name: Regenerate pages.json from the GitHub API
         env:
           GH_TOKEN: ${{ github.token }}
-        run: python3 scripts/gen-pages.py
+        run: node scripts/gen-pages.mjs
       - name: Fail on drift
         run: |
           if ! git diff --exit-code pages.json; then
-            echo "::error::pages.json drifted from the GitHub API. Run scripts/gen-pages.py and commit."
+            echo "::error::pages.json drifted from the GitHub API. Run node scripts/gen-pages.mjs and commit."
             exit 1
           fi
+  submodules:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          submodules: false
+      - name: Submodule set equals the declared html-repo list
+        run: node scripts/gen-gitmodules.mjs --check
