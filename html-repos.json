@@ -30,9 +30,9 @@
     "Projects-endeavours",
     "Projects-labtools",
     "projects-pub-all",
-    "Projects-pvt"
+    "project-pvt-all"
   ],
-  "unpinned": {
-    "Projects-pvt": "not readable without credentials from the declaring session (private or absent): declared, gitlink pinned by an owner-side run of git submodule add"
+  "no_deploy": {
+    "project-pvt-all": "PRIVATE: aggregated as a submodule only, never in any public deploy/Pages list"
   }
 }

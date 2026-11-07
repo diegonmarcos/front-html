@@ -96,7 +96,7 @@
 	url = https://github.com/diegonmarcos/projects-pub-all.git
 	branch = main
 
-[submodule "Projects-pvt"]
-	path = Projects-pvt
-	url = https://github.com/diegonmarcos/Projects-pvt.git
+[submodule "project-pvt-all"]
+	path = project-pvt-all
+	url = https://github.com/diegonmarcos/project-pvt-all.git
 	branch = main

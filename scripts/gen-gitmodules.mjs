@@ -17,6 +17,8 @@ const ROOT = join(dirname(fileURLToPath(import.meta.url)), '..');
 const decl = JSON.parse(readFileSync(join(ROOT, 'html-repos.json'), 'utf8'));
 const entries = [...decl.base, ...decl.repos.map((r) => ({ path: r, repo: r }))];
 
+// deploy set = declared repos minus no_deploy (private, submodule-only)
+export const deploy = entries.filter((e) => !(e.repo in (decl.no_deploy || {}))).map((e) => e.repo);
 const dup = entries.map((e) => e.path).filter((p, i, a) => a.indexOf(p) !== i);
 if (dup.length) { console.error(`html-repos.json: duplicate path ${dup.join(', ')}`); process.exit(1); }
 
@@ -34,6 +36,7 @@ if (!process.argv.includes('--check')) {
   process.exit(0);
 }
 let bad = 0;
+for (const r of Object.keys(decl.no_deploy || {})) { if (!entries.some((e) => e.repo === r)) { console.error(`no_deploy ${r} is not a declared repo`); bad = 1; } if (deploy.includes(r)) { console.error(`${r} is private but in the deploy set`); bad = 1; } }
 if ((existsSync(file) ? readFileSync(file, 'utf8') : '') !== text) { console.error('.gitmodules differs from html-repos.json: run node scripts/gen-gitmodules.mjs'); bad = 1; }
 const links = new Set(execFileSync('git', ['-C', ROOT, 'ls-files', '--stage'], { encoding: 'utf8' })
   .split('\n').filter((l) => l.startsWith('160000')).map((l) => l.split('\t')[1]));
