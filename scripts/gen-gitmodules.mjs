@@ -37,7 +37,9 @@ let bad = 0;
 if ((existsSync(file) ? readFileSync(file, 'utf8') : '') !== text) { console.error('.gitmodules differs from html-repos.json: run node scripts/gen-gitmodules.mjs'); bad = 1; }
 const links = new Set(execFileSync('git', ['-C', ROOT, 'ls-files', '--stage'], { encoding: 'utf8' })
   .split('\n').filter((l) => l.startsWith('160000')).map((l) => l.split('\t')[1]));
-for (const e of entries) if (!links.has(e.path)) { console.error(`declared html repo ${e.repo} has no gitlink at ${e.path}`); bad = 1; }
+const unpinned = decl.unpinned || {};
+for (const e of entries) if (!links.has(e.path) && !(e.repo in unpinned)) { console.error(`declared html repo ${e.repo} has no gitlink at ${e.path}`); bad = 1; }
 for (const p of links) if (!entries.some((e) => e.path === p)) { console.error(`gitlink ${p} is not a declared html repo`); bad = 1; }
+for (const r of Object.keys(unpinned)) console.log(`note: ${r} declared but unpinned (${unpinned[r]})`);
 if (!bad) console.log(`submodules match html-repos.json (${entries.length})`);
 process.exit(bad);

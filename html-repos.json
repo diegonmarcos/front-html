@@ -1,10 +1,16 @@
 {
-  "_doc": "SoT of the html site repos this hub mounts as submodules (owner-declared). .gitmodules and the gitlinks are derived from it: node scripts/gen-gitmodules.mjs [--check]. Each repo is mounted at a root folder of the same name; the two base entries keep their historical folders.",
+  "_doc": "SoT of the html site repos this hub mounts as submodules (owner-declared). .gitmodules and the gitlinks are derived from it: node scripts/gen-gitmodules.mjs [--check]. Each repo is mounted at a root folder of the same name; the two base entries keep their historical folders. All Projects-* html repos are listed (Projects-___ is the Projects hub, mounted per repo under 0_hub, so it is not repeated here).",
   "owner": "diegonmarcos",
   "branch": "main",
   "base": [
-    { "path": "diegonmarcos.github.io", "repo": "diegonmarcos.github.io" },
-    { "path": "profile", "repo": "diegonmarcos" }
+    {
+      "path": "diegonmarcos.github.io",
+      "repo": "diegonmarcos.github.io"
+    },
+    {
+      "path": "profile",
+      "repo": "diegonmarcos"
+    }
   ],
   "repos": [
     "cloud-me-pub-profiles-_lnktree",
@@ -22,6 +28,11 @@
     "HardTech-Chronos",
     "HardTech-DeepXTech",
     "Projects-endeavours",
-    "Projects-labtools"
-  ]
+    "Projects-labtools",
+    "projects-pub-all",
+    "Projects-pvt"
+  ],
+  "unpinned": {
+    "Projects-pvt": "not readable without credentials from the declaring session (private or absent): declared, gitlink pinned by an owner-side run of git submodule add"
+  }
 }

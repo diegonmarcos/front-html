@@ -90,3 +90,13 @@
 	path = Projects-labtools
 	url = https://github.com/diegonmarcos/Projects-labtools.git
 	branch = main
+
+[submodule "projects-pub-all"]
+	path = projects-pub-all
+	url = https://github.com/diegonmarcos/projects-pub-all.git
+	branch = main
+
+[submodule "Projects-pvt"]
+	path = Projects-pvt
+	url = https://github.com/diegonmarcos/Projects-pvt.git
+	branch = main
